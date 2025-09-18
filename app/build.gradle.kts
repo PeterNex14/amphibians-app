@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -58,6 +59,7 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
     // Kotlin Serialization
+//    implementation(libs.org.jetbrains.kotlinx)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
     
     // Retrofit Library
@@ -66,6 +68,9 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:5.1.0")
 
     // Koil Library
-    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation(libs.io.coil.kt)
+
+//    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.3")
 
 }
